@@ -6,11 +6,11 @@ layout: default
 <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="{{ page.date | date: "%Y-%m-%d %H:%M" }}"
-        class="post-meta__date date">{{ page.date | date: "%-d %b %Y" }}</time>
+      <time datetime="{{ page.date | date: " %Y-%m-%d %H:%M" }}" class="post-meta__date date">{{ page.date | date: "%-d
+        %b %Y" }}</time>
       {% if page.tags.size > 0 %}
-      &#8226; <span class="post-meta__tags">on {% for tag in page.tags %}<a
-          href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},
+      &#8226; <span class="post-meta__tags">on {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag }}">{{
+          tag }}</a>{% if forloop.last == false %},
         {% endif %}{% endfor %}</span>
       {% endif %}
     </div>
@@ -26,8 +26,8 @@ layout: default
     <h4>Comments</h4>
     <div class="fb-comments" data-href="http://cpsoneghett.github.io{{ page.url }}" data-colorscheme="dark"
       data-num-posts="4" data-width="706"></div>
-    {% endif %}
+      {% endif %}
   </section>
-  <!-- /#disqus_thread -->{% endif %}
+  <!-- /#disqus_thread -->
 </article>
 {% include facebook-like.html %}
