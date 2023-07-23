@@ -135,27 +135,26 @@ O padrão Strategy faz parte dos grupos de padrões comportamentais (Behavioral 
 
 ```mermaid
 classDiagram
-  class Context {
-    + setStrategy(Strategy)
-    + executeStrategy(): void
-  }
+    class Context {
+        + setStrategy(Strategy)
+        + executeStrategy(): void
+    }
 
-  class StrategyInterface {
-    + algorithmInterface(): void
-  }
+    class StrategyInterface {
+        + algorithmInterface(): void
+    }
 
-  class ConcreteStrategyA {
-    + algorithmInterface(): void
-  }
+    class ConcreteStrategyA {
+        + algorithmInterface(): void
+    }
 
-  class ConcreteStrategyB {
-    + algorithmInterface(): void
-  }
+    class ConcreteStrategyB {
+        + algorithmInterface(): void
+    }
 
-  Context --|> StrategyInterface
-  StrategyInterface o-- ConcreteStrategyA
-  StrategyInterface o-- ConcreteStrategyB
-
+    Context --|> StrategyInterface
+    StrategyInterface o-- ConcreteStrategyA
+    StrategyInterface o-- ConcreteStrategyB
 ```
 
 Ou seja, é uma estrutura generalista que tenta abstrair a solução genérica em estratégias diferentes e que, devido ao encapsulamento, eu poderei fazer com que os clientes não tenham sequer conhecimento de como a implementação é feita, bastando ter o contato com a assinatura do método. 
@@ -189,7 +188,6 @@ classDiagram
   LoadBalancer --|> LoadBalancingStrategy
   LoadBalancingStrategy o-- RoundRobinStrategy
   LoadBalancingStrategy o-- RandomStrategy
-
 ```
 
 Logo, a implementação das classes ficaria da seguinte forma:
