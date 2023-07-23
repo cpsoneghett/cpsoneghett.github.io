@@ -133,7 +133,7 @@ Já que eu não quero (e nem posso) mudar a assinatura do método, me vejo "obri
 
 O padrão Strategy faz parte dos grupos de padrões comportamentais (Behavioral Patterns). Ele pode ser definido como uma estrutura genérica abaixo:
 
-```mermaid
+``` mermaid
 classDiagram
     class Context {
         + setStrategy(Strategy)
@@ -163,7 +163,7 @@ Ou seja, é uma estrutura generalista que tenta abstrair a solução genérica e
 
 Dessa forma, tentando trazer esse conceito abstrato do Strategy para o meu problema, eu pensei em uma estrutura da seguinte forma:
 
-```mermaid
+``` mermaid
 classDiagram
   class LoadBalancer {
     - resources: list
@@ -410,7 +410,7 @@ Já que eu tive que fazer um wrapper da classe Random do Java por motivos de tes
 
 O padrão Singleton faz parte dos grupos de padrões criacionais (Creational Patterns). Ele pode ser definido como uma estrutura genérica abaixo:
 
-```mermaid
+``` mermaid
 classDiagram
   class Singleton {
     - singletonData
